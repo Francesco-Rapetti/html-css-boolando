@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+
+header {
+    background-color: #0E0E0E;
+    padding-top: 48px;
+    position: sticky;
+    width: 100%;
+    top: -48px;
+}
+
+.headerTwo {
+    position: sticky;
+    z-index: 1;
+    width: 100%;
+    background-color: #FF6900;
+    margin: 0 auto;
+    padding: 13px 5%;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.6);
+}
+
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+}
+
+#header-logo {
+    max-width: 100px;
+}
+
+#header-space {
+    /* height: 100px; */
+}
