@@ -9,6 +9,7 @@
 
 body {
     font-family: sans-serif;
+    position: relative;
     z-index: -1;
 }
 
@@ -66,14 +67,14 @@ header {
 /* MAIN */
 
 main {
+    position: relative;
     padding: 0 10%;
     z-index: -1;
 }
 
-/* img start */
+/* product start */
 
 .product-container {
-    position: relative;
     z-index: 0;
     display: flex;
     justify-content: space-between;
@@ -82,13 +83,11 @@ main {
     max-width: 1500px;
 }
 
+/* img start */
+
 .product-container figure img {
     max-width: 340px;
     transition: 0.5s;
-}
-
-.product-container figure > figcaption {
-    margin-bottom: 48px;
 }
 
 .product-container > .product {
@@ -98,6 +97,8 @@ main {
 .product-container .img-container {
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .product-container .img-container.first { background-image: url(../img/1b.webp); } 
@@ -107,11 +108,71 @@ main {
 .product-container .img-container.fifth { background-image: url(../img/5b.webp); } 
 .product-container .img-container.sixth { background-image: url(../img/6b.webp); } 
 
-.product-container img:hover {
+.product-container .img-container:hover img {
     opacity: 0;
 }
 
 /* img end */
+
+/* figcaption start */
+
+.product-container figure > figcaption {
+    margin-bottom: 48px;
+}
+
+.product-container figure > figcaption > .brand {
+    font-size: 12px;
+}
+
+.product-container figure > figcaption > .name {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.product-container figure > figcaption > .price {
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.product-container figure > figcaption > .price.discount {
+    font-weight: 600;
+    text-decoration: none;
+    color: red;
+}
+
+/* figcaption end */
+
+/* discount start */
+
+.img-container > div {
+    position: absolute;
+    z-index: 1;
+    top: 400px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.img-container > div > div {
+    display: flex;
+    pointer-events: auto;
+}
+
+.img-container > div > div > div {
+    padding: 4px 3px;
+}
+
+.img-container > div > div > .sale {
+    background-color: red;
+    margin-right: 4px;
+}
+
+.img-container > div > div > .eco {
+    background-color: green;
+}
+
+/* discount end */
 
 /* heart start */
 
@@ -121,12 +182,14 @@ main {
     margin: 12px 0 0 292px;
     background-color: white;
     padding: 5px 16px 5px 15px;
+    pointer-events: none;
 }
 
 .heart > input[type="checkbox"] {
     appearance: none;
     cursor: pointer;
     outline: none;
+    pointer-events: auto;
 }
 
 .heart > input[type="checkbox"]:before {
@@ -160,5 +223,8 @@ main {
 }
 
 /* heart end */
+
+/* product end */
+
 
 
