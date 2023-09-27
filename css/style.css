@@ -1,39 +1,144 @@
+/* GENERAL */
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+body {
+    font-family: sans-serif;
+    position: relative;
+    z-index: -4;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons > * {
+    margin: 0 4px;
+}
+
 /* HEADER */
 
 header {
     background-color: #0E0E0E;
-    padding-top: 48px;
+    padding-top: 40px;
     position: sticky;
     width: 100%;
-    top: -48px;
+    top: -40px;
 }
 
-.headerTwo {
+#headerTwo {
     position: sticky;
-    z-index: 1;
     width: 100%;
     background-color: #FF6900;
-    margin: 0 auto;
-    padding: 13px 5%;
+    padding: 13px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0px 0px 8px rgba(0,0,0,.6);
 }
 
 #header-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
 }
 
 #header-logo {
     max-width: 100px;
 }
 
-#header-space {
-    /* height: 100px; */
+/* MAIN */
+
+main {
+    padding: 0 10%;
+    position: relative;
+    z-index: -3;
 }
+
+.img-container {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 48px auto 0 auto;
+    max-width: 1500px;
+}
+
+.img-container figure > img {
+    max-width: 340px;
+}
+
+.img-container figure > figcaption {
+    margin-bottom: 48px;
+}
+
+.img-container > .product {
+    display: flex;
+}
+
+/* heart start */
+
+.heart {
+    position: absolute;
+    z-index: 1;
+    margin: 12px 0 0 292px;
+    background-color: white;
+    padding: 5px 15px 5px 15px;
+}
+
+.heart > input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.heart > input[type="checkbox"]:before {
+    content: "♥";
+    color: black;
+    font-size: 30px;
+    /* display: none; */
+}
+
+.heart > input[type="checkbox"]:after {
+    content: "♥";
+    color: red;
+    font-size: 30px;
+    display: none;
+}
+
+.heart > input[type="checkbox"]:checked:after {
+    display: inline;
+}
+
+.heart > input[type="checkbox"]:checked:before {
+    display: none;
+}
+
+.heart > input[type="checkbox"]:not(:checked):before {
+    display: inline;
+}
+
+.heart > input[type="checkbox"]:hover:before {
+    color: red;
+}
+
+/* heart end */
+
+
