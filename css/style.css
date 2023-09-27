@@ -246,17 +246,18 @@ footer > #info {
     margin: 0 auto;
 }
 
+footer > #info > div > a {
+    margin-right: 4px;
+}
+
 footer div > p {
     margin-bottom: 8px;
     font-size: 12px;
 }
 
-footer .social * {
-    margin-right: 2px;
-}
-
 footer .social > a {
     font-size: medium;
+    margin-right: 4px;
 }
 
 footer .social > a:hover {
