@@ -4,12 +4,12 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
 body {
     font-family: sans-serif;
-    position: relative;
-    z-index: -4;
+    z-index: -1;
 }
 
 a {
@@ -67,13 +67,14 @@ header {
 
 main {
     padding: 0 10%;
-    position: relative;
-    z-index: -3;
+    z-index: -1;
 }
 
-.img-container {
+/* img start */
+
+.product-container {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -81,17 +82,36 @@ main {
     max-width: 1500px;
 }
 
-.img-container figure > img {
+.product-container figure img {
     max-width: 340px;
+    transition: 0.5s;
 }
 
-.img-container figure > figcaption {
+.product-container figure > figcaption {
     margin-bottom: 48px;
 }
 
-.img-container > .product {
+.product-container > .product {
     display: flex;
 }
+
+.product-container .img-container {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.product-container .img-container.first { background-image: url(../img/1b.webp); } 
+.product-container .img-container.second { background-image: url(../img/2b.webp); } 
+.product-container .img-container.third { background-image: url(../img/3b.webp); } 
+.product-container .img-container.fourth { background-image: url(../img/4b.webp); } 
+.product-container .img-container.fifth { background-image: url(../img/5b.webp); } 
+.product-container .img-container.sixth { background-image: url(../img/6b.webp); } 
+
+.product-container img:hover {
+    opacity: 0;
+}
+
+/* img end */
 
 /* heart start */
 
@@ -100,7 +120,7 @@ main {
     z-index: 1;
     margin: 12px 0 0 292px;
     background-color: white;
-    padding: 5px 15px 5px 15px;
+    padding: 5px 16px 5px 15px;
 }
 
 .heart > input[type="checkbox"] {
